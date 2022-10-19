@@ -68,7 +68,7 @@ export const getUserData = () => {
         payload: user.data,
       });
     } catch (error) {
-      console.log(error);
+      console.log("error",error);
     }
   };
 };
