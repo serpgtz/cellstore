@@ -57,10 +57,11 @@ export const getUserData = () => {
     try {
       const user = await axios.get("/perfil", {
         headers: {
-          Bearer: localStorage.getItem("token"),
+          Bearer: JSON.parse(localStorage.getItem("token")),
+        
         },
       });
-
+        // Bearer: localStorage.getItem("token"),
       localStorage.setItem("user", JSON.stringify(user.data));
       return dispatch({
         type: USER,

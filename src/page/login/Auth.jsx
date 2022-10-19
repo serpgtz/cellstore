@@ -27,7 +27,7 @@ const Auth = () => {
 
   const error_back = useSelector((state) => state.user.error);
   const token = useSelector((state) => state.user.token);
-
+  console.log("token",token)
   const handleResponseGoogle = (response) => {
     console.log('jwt =>' + response.credential)
     localStorage.setItem('user_google', JSON.stringify(jwt_decode(response.credential)))
